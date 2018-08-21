@@ -22,13 +22,11 @@ export default props => (
           <div>
             <h1>Hello, Beagles!</h1>
             <ul>
-              {list.map((item, index) => {
-                return index < 10 ? (
-                  <li key={index}>
-                    <img src={item} alt="" />
-                  </li>
-                ) : null;
-              })}
+              {list.map((item, index) => (
+                <li key={index}>
+                  <img src={item} alt="" />
+                </li>
+              ))}
             </ul>
           </div>
         )}
