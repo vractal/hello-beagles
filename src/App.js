@@ -12,12 +12,12 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 export default props => (
   <ReduxProvider store={store}>
     <CroodsProvider
-      baseUrl="https://dog.ceo/api"
+      baseUrl="https://cors-redirect.herokuapp.com/https://dog.ceo/api/breed/beagle"
       parseListResponse={({ message: list }) => ({ list })}
     >
       <List
         name="beagle"
-        path="/breed/beagle/images"
+        path="/images"
         render={list => (
           <div>
             <h1>Hello, Beagles!</h1>
